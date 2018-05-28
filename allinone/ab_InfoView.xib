@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="landscape">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ab_InfoView">
+            <connections>
+                <outlet property="content" destination="i5M-Pr-FkT" id="hIm-7i-yks"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" image="end_tips" translatesAutoresizingMaskIntoConstraints="NO" id="NaN-D7-I29">
+                    <rect key="frame" x="83" y="12" width="500" height="350"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="500" id="fWJ-6B-Tya"/>
+                        <constraint firstAttribute="height" constant="350" id="geF-ec-XfT"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2、使用3～8副，每副52张纸牌，洗在一起，置於发牌盒中，由荷官从其中分发。各家力争手中有两三张牌总点数为9或接近9，K、Q、J和10都计为0，其他牌按牌面计点。计算时，将各家手中的牌值相加，但仅论最後一位数字。点数大的一方获胜。" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FeU-N0-0xf">
+                    <rect key="frame" x="151" y="122.5" width="400" height="200"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="200" id="F6o-nt-0pd"/>
+                        <constraint firstAttribute="width" constant="400" id="sXo-1a-GJL"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name=".SFNSDisplay" family=".SF NS Display" pointSize="24"/>
+                    <color key="textColor" red="0.86534574389999996" green="1" blue="0.85533449709999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1、选择和、庄、闲下注。" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Ut-Gp-0hU">
+                    <rect key="frame" x="151" y="87.5" width="279" height="29"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                    <color key="textColor" red="0.86534574386666852" green="1" blue="0.8553344971300203" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="游戏规则" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FOJ-ju-bfq">
+                    <rect key="frame" x="273.5" y="36.5" width="121.5" height="36"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                    <color key="textColor" red="0.9754016410677534" green="1" blue="0.96407811177101399" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YNA-BI-LPc">
+                    <rect key="frame" x="543" y="34" width="40" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="40" id="gGr-NR-O4w"/>
+                        <constraint firstAttribute="height" constant="40" id="s0p-HF-NEx"/>
+                    </constraints>
+                    <state key="normal" backgroundImage="bt_close"/>
+                    <connections>
+                        <action selector="dismiss:" destination="-1" eventType="touchUpInside" id="A56-wz-dTp"/>
+                    </connections>
+                </button>
+            </subviews>
+            <constraints>
+                <constraint firstItem="NaN-D7-I29" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="184-Zw-Pms"/>
+                <constraint firstItem="NaN-D7-I29" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="7Nj-XZ-Vdb"/>
+                <constraint firstItem="YNA-BI-LPc" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leadingMargin" constant="523" id="9s4-8n-pzE"/>
+                <constraint firstItem="FeU-N0-0xf" firstAttribute="top" secondItem="2Ut-Gp-0hU" secondAttribute="bottom" constant="6" id="CMf-wQ-fd1"/>
+                <constraint firstItem="NaN-D7-I29" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="Cf3-mD-Qe9"/>
+                <constraint firstItem="YNA-BI-LPc" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="34" id="V7w-3g-XkG"/>
+                <constraint firstItem="2Ut-Gp-0hU" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="151" id="Whj-OH-Bg3"/>
+                <constraint firstItem="FOJ-ju-bfq" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="bLc-cG-7sj"/>
+                <constraint firstItem="FOJ-ju-bfq" firstAttribute="centerY" secondItem="YNA-BI-LPc" secondAttribute="centerY" id="iz3-4s-Vh4"/>
+                <constraint firstItem="FeU-N0-0xf" firstAttribute="leading" secondItem="2Ut-Gp-0hU" secondAttribute="leading" id="z1y-PZ-jDW"/>
+                <constraint firstItem="2Ut-Gp-0hU" firstAttribute="top" secondItem="FOJ-ju-bfq" secondAttribute="bottom" constant="15" id="zhn-Jl-WEb"/>
+            </constraints>
+        </view>
+    </objects>
+    <resources>
+        <image name="bt_close" width="59" height="59"/>
+        <image name="end_tips" width="350" height="200"/>
+    </resources>
+</document>
