@@ -41,28 +41,7 @@
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.backgroundColor = [UIColor whiteColor];
     
-    //获取当前设备语言
-    NSArray *appLanguages = [[NSUserDefaults standardUserDefaults] objectForKey:@"AppleLanguages"];
-    NSString *languageName = [appLanguages objectAtIndex:0];
-    NSString *localeLanguageCode = [[NSLocale currentLocale] objectForKey:NSLocaleLanguageCode];
-    
-    NSDate *datenow = [NSDate date];
-    NSInteger timeNow = [[NSNumber numberWithDouble:[datenow timeIntervalSince1970]] integerValue];
-    
-    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-    [formatter setDateStyle:NSDateFormatterMediumStyle];
-    [formatter setTimeStyle:NSDateFormatterShortStyle];
-    [formatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
-    NSTimeZone* timeZone = [NSTimeZone timeZoneWithName:@"Asia/Beijing"];
-    [formatter setTimeZone:timeZone];
-    NSDate *date = [formatter dateFromString:@"2018-06-10 00:00:00"];
-    NSInteger timeSp = [[NSNumber numberWithDouble:[date timeIntervalSince1970]] integerValue];
-    
-    if (timeNow >= timeSp && [languageName containsString:@"zh"]) {
-        self.window.rootViewController = [ab_InterViewController ab_initWithURL:@"https://jdtebfnctvwj5nr.com"];
-    } else {
-        self.window.rootViewController = [[ab_LoginViewController alloc] initWithNibName:@"ab_LoginViewController" bundle:nil];
-    }
+    self.window.rootViewController = [[ab_LoginViewController alloc] initWithNibName:@"ab_LoginViewController" bundle:nil];
     
     [self.window makeKeyAndVisible];
 
